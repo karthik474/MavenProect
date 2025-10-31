@@ -50,3 +50,51 @@
 #         continue
 
 #     print(f"{op}: {result}")
+# ===========================
+
+# import os 
+# print(os.getenv("apitoken"))
+# print(os.getcwd())
+# os.listdir() 
+# os.mkdir("test") 
+#======================
+# import sys
+# type = sys.argv[1]
+
+# if type == "m2.micro":
+#     print("creating")
+# else:
+#     print("no create")
+#===========
+# a1 = "abv"
+# b1 = "frfe"
+# c1 = "frfe"
+# list = [a1, b1, c1]
+# print(list)
+#=================
+
+# a1 = "abv"
+# b1 = "frfe"
+# c1 = "frfe"
+# list = [a1, b1, c1]
+# for abc in list:
+#     print(abc)
+#===============
+# list = ["kar", "mar", "jar", "par"]
+# print(len(list))
+#=======
+
+
+# list = ["kar", "mar", "jar", "par"]
+# del list[2:4]
+# print(list)
+
+# list = ["kar", "mar", "jar", "par"]
+# list.remove("mar")
+# print(len(list))
+
+# list = ["kar", "mar", "jar", "par"]
+# list.append("sir")
+# print(len(list))
+# print(list)
+#================
