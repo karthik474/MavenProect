@@ -94,7 +94,69 @@
 # print(len(list))
 
 # list = ["kar", "mar", "jar", "par"]
+# print(list[2:3])
+
+# list = ["kar", "mar", "jar", "par"]
 # list.append("sir")
 # print(len(list))
 # print(list)
 #================
+
+# list = [10, 3, 5]
+# list.sort()
+# print(list)
+#=================
+# x = 3
+
+# if x > 5:
+#     print("x is greater than 5")
+# elif x == 5:
+#     print("x is equal to 5")
+# else:
+#     print("x is less than 5")
+#=================================
+
+# for i in range(10):
+#     print(i)
+# for _ in range(10):
+#     print("mama")
+#======================
+# be = (man, cam, dan)
+# for x in be:
+#     print(x)
+    
+#=========
+# import subprocess
+
+# # Get all pod names in the current namespace
+# result = subprocess.run(
+#     ["kubectl", "get", "pods", "--no-headers", "-o", "custom-columns=:metadata.name"],
+#     capture_output=True,
+#     text=True
+# )
+
+# # Split output into a list of pod names
+# pods = result.stdout.strip().split("\n")
+
+# # Loop through each pod
+# for pod in pods:
+#     print(f"Processing pod: {pod}")
+#     # Describe the pod (or any other kubectl command)
+#     subprocess.run(["kubectl", "describe", "pod", pod])
+#===============================
+
+# numbers = [1, 2, 3, 4, 5, 6]
+
+# for number in numbers:
+#     if number == 1:
+#         print("found 1")
+#         break
+# else:
+#     print("not found 1")
+#==================
+numbers = [1, 2, 3, 4, 5,]
+for num in numbers:
+    if num == 3:
+        print(num)
+        # continue
+    # print(num)
