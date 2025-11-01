@@ -161,4 +161,23 @@
         # continue
     # print(num)
 #==============================
-  
+# variable_of = {
+#     "name": "kar",
+#     "name1": "bar",
+#     "name2": "mar"
+# }
+# print(variable_of.["name"])
+#===============
+# EC2_info = [
+#     {"id": "instace01",
+#      "type": "t2.micro"
+#     },
+#     {"id": "instace02",
+#      "type": "t2.medium"
+#     },
+#     {"id": "instace03",
+#     "type": "t2.large"
+#     }
+# ]
+# print(EC2_info[2]["type"])
+===========================
