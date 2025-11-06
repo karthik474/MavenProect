@@ -9,79 +9,96 @@
 | **Use case**  | Sequence of items                | Mapping of keys to values           |
 
 ---
+# Interview Questions (Beginner and Intermediate)
 
-## 2. Real-world Python for DevOps Examples
+## Describe a real-world example of how you used Python to solve a DevOps challenge.
 
-- **GitHub Webhooks** – Automate CI/CD pipelines.
-- **JIRA Integration** – Automate ticket creation and updates.
-- **File Operations** – Automate configuration or log file management.
+- Here you can talk about the projects that we did in this series
+  - GitHub Webhooks
+  - JIRA integration
+  - File Operations
 
-**Challenges & Solutions:**
-- Challenge: Managing API authentication securely.  
-  Solution: Use environment variables, input variables, or command-line arguments instead of hardcoding credentials.
+## Discuss the challenges that you faced while using Python for DevOps and how did you overcome it.
 
----
+- Here you can mention about a challenge that you faced while implementating a Python project for DevOps that we learnt.
 
-## 3. Securing Python Code
+## How can you secure your Python code and scripts?
 
-- Avoid storing sensitive data in plain text.
-- Use **environment variables**, **input arguments**, or **command-line parameters**.
-- Limit access to configuration files.
+- Handle any sensetive information using Input variables, command line arguments or env vars.
 
----
+## Explain the difference between mutable and immutable objects.
 
-## 4. Mutable vs Immutable Objects
+In Python, mutable objects can be altered after creation, while immutable objects cannot be changed once created. For instance:
 
-- **Mutable:** Can be modified after creation (e.g., lists).  
-- **Immutable:** Cannot be modified after creation (e.g., tuples).
+Mutable objects like lists can be modified:
 
-```python
-# Mutable
+```
 my_list = [1, 2, 3]
-my_list[0] = 0
+my_list[0] = 0  # Modifying an element in the list
 print(my_list)  # Output: [0, 2, 3]
+```
 
-# Immutable
+Immutable objects like tuples cannot be altered:
+
+```
 my_tuple = (1, 2, 3)
-# my_tuple[0] = 0  # Error
-5. List vs Tuple
-List: Mutable, dynamic.
+# Attempting to change a tuple will result in an error
+# my_tuple[0] = 0
+```
 
-Tuple: Immutable, fixed.
+## Differentiate between list and tuple in Python.
 
-python
-Copy code
-# List
+Lists are mutable and typically used for storing collections of items that can be changed, while tuples are immutable and commonly used to store collections of items that shouldn't change. Examples:
+
+List:
+
+```
 my_list = [1, 2, 3]
-my_list.append(4)
-print(my_list)  # [1, 2, 3, 4]
+my_list.append(4)  # Modifying by adding an element
+print(my_list)  # Output: [1, 2, 3, 4]
+```
 
-# Tuple
+Tuple:
+
+```
 my_tuple = (1, 2, 3)
-# my_tuple.append(4)  # Error
-6. Virtualenv
-Creates isolated Python environments for different projects.
+# Attempting to modify a tuple will result in an error
+# my_tuple.append(4)
+```
 
-bash
-Copy code
-# Create virtual environment
+## Explain the use of virtualenv.
+
+Virtualenv creates isolated Python environments, allowing different projects to use different versions of packages without conflicts. Example:
+
+Creating a virtual environment:
+
+### Creating a virtual environment named 'myenv'
 virtualenv myenv
 
-# Activate
-# Windows
-myenv\Scripts\activate
-# Unix/MacOS
-source myenv/bin/activate
-7. Decorators
-Decorators modify or extend the behavior of functions.
+Activating the virtual environment:
 
-python
-Copy code
+### On Windows
+```
+myenv\Scripts\activate
+```
+
+### On Unix or MacOS
+```
+source myenv/bin/activate
+```
+
+## What are decorators in Python?
+
+Decorators modify the behavior of functions. They take a function as an argument, add some functionality, and return another function without modifying the original function's code. Example:
+
+Defining a simple decorator:
+
+```
 def my_decorator(func):
     def wrapper():
-        print("Before the function.")
+        print("Something is happening before the function is called.")
         func()
-        print("After the function.")
+        print("Something is happening after the function is called.")
     return wrapper
 
 @my_decorator
@@ -89,96 +106,148 @@ def say_hello():
     print("Hello!")
 
 say_hello()
-8. Exception Handling
-python
-Copy code
+```
+
+## How does exception handling work in Python?
+
+Exception handling in Python uses try, except, else, and finally blocks. Example:
+
+Handling division by zero exception:
+
+```
 try:
     result = 10 / 0
 except ZeroDivisionError:
     print("Division by zero is not allowed.")
 else:
-    print("Result:", result)
+    print("Division successful:", result)
 finally:
     print("Execution completed.")
-9. append() vs extend()
-python
-Copy code
-# append()
+```
+
+## What's the difference between append() and extend() for lists?
+
+append() adds a single element to the end of a list, while extend() adds multiple elements by appending elements from an iterable. Example:
+
+Using append():
+```
 my_list = [1, 2, 3]
 my_list.append(4)
-print(my_list)  # [1, 2, 3, 4]
+print(my_list)  # Output: [1, 2, 3, 4]
+```
 
-# extend()
-my_list.extend([5, 6])
-print(my_list)  # [1, 2, 3, 4, 5, 6]
-10. Lambda Functions
-Anonymous functions for short tasks.
+Using extend():
 
-python
-Copy code
-square = lambda x: x ** 2
+```
+my_list = [1, 2, 3]
+my_list.extend([4, 5])
+print(my_list)  # Output: [1, 2, 3, 4, 5]
+```
+
+## Explain the use of lambda functions in Python.
+
+Lambda functions are anonymous functions used for short tasks. Example:
+
+Defining and using a lambda function:
+
+```
+square = lambda x: x**2
 print(square(5))  # Output: 25
-11. Loops
-python
-Copy code
-# For loop
+```
+
+## What are the different types of loops in Python?
+
+Python has for loops and while loops. 
+
+Example:
+
+Using for loop:
+```
 for i in range(5):
     print(i)
+```
 
-# While loop
+Using while loop:
+```
 i = 0
 while i < 5:
     print(i)
     i += 1
-12. == vs is
-== compares values.
+```
 
-is checks object identity.
+## Explain the difference between == and is operators.
 
-python
-Copy code
+The == operator compares the values of two objects, while the is operator checks if two variables point to the same object in memory. 
+
+Example:
+
+Using ==:
+
+```
 a = [1, 2, 3]
 b = [1, 2, 3]
-print(a == b)  # True
-print(a is b)  # False
+print(a == b)  # Output: True (because values are equal)
+```
 
-c = a
-print(a is c)  # True
-13. pass Keyword
-Placeholder when no action is needed.
+Using is:
 
-python
-Copy code
+```
+a = [1, 2, 3]
+b = a
+print(a is b)  # Output: True (because they reference the same object)
+```
+
+## What is the use of the pass keyword?
+
+The pass keyword is a no-operation placeholder used when a statement is syntactically needed but no action is required. Example:
+
+Using pass:
+```
 def placeholder_function():
     pass  # To be implemented later
-14. Global vs Local Variables
-python
-Copy code
-# Global
+```
+
+## What is the difference between global and local variables?
+
+Global variables are defined outside functions and can be accessed anywhere in the code, while local variables are defined inside functions and are only accessible within that function's scope. Example:
+
+Using a global variable:
+```
 global_var = 10
+
 def my_function():
     print(global_var)
-my_function()  # 10
 
-# Local
-def another_function():
+my_function()  # Output: 10
+```
+
+Using a local variable:
+
+```
+def my_function():
     local_var = 5
     print(local_var)
-another_function()  # 5
-# print(local_var)  # Error
-15. open() vs with open()
-open() → Must manually close.
 
-with open() → Automatically closes file.
+my_function()  # Output: 5
+# Attempting to access local_var outside the function will result in an error
+```
 
-python
-Copy code
-# Using open()
+## Explain the difference between open() and with open() statement.
+
+open() is a built-in function used to open a file and return a file object. 
+However, it's crucial to manually close the file using file_object.close(). 
+Conversely, with open() is a context manager that automatically handles file closure, ensuring clean-up even if exceptions occur. 
+
+Example:
+```
 file = open('example.txt', 'r')
 content = file.read()
 file.close()
+```
 
-# Using with open()
+Using with open():
+```
 with open('example.txt', 'r') as file:
     content = file.read()
-# File is auto-closed
+# File is automatically closed when the block exits
+```
