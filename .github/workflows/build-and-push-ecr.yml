@@ -9,7 +9,7 @@ on:
 env:
   AWS_REGION: us-east-1
   ECR_REPO: my-maven-app
-  IMAGE_TAG: latest
+  IMAGE_TAG: latest1
   AWS_ACCOUNT_ID: 451701314187
 
 jobs:
