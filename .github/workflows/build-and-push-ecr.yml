@@ -9,7 +9,7 @@ on:
 env:
   AWS_REGION: us-east-1
   ECR_REPO: my-maven-app
-  IMAGE_TAG: latest1
+  IMAGE_TAG: latest2
   AWS_ACCOUNT_ID: 451701314187
 
 jobs:
@@ -24,10 +24,10 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: '17'
+          java-version: '8'
 
       - name: Build Maven JAR
-        run: mvn clean install
+        run: mvn clean package
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
